@@ -44,6 +44,9 @@ Route::post('/usuario', array('before' => 'csrf' , 'uses' => 'InicioController@u
 // login
 Route::get('/login', 'IngresoController@login');
 
+// inicio usuario (cuando ya registra el usuario)
+Route::post('/login', array('before' => 'csrf' , 'uses' => 'IngresoController@logea') );
+
 // logout
 Route::get('/logout', function(){
 	try{

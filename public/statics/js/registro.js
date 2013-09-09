@@ -12,6 +12,7 @@ $(document).ready(function() {
 		var error = "OK";
 		var mayor = $('#checkbox1:checked');
 		var legales = $('#checkbox2:checked');
+		var csrf = $('input[name*="_token"]').val();
 
 		
 

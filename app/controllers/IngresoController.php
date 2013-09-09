@@ -38,7 +38,31 @@ class IngresoController extends BaseController {
 
 	public function login()
 	{
-		return 'login';
+		if(Sentry::check()){
+			$usuario = Sentry::getUser();
+			return View::make('inicio')->with('usuariolog', $usuario);
+		}
+
+		return View::make('login');
+	}
+
+	public function logea()
+	{
+		$email = Input::get('email');
+		$pass = Input::get('pass');
+
+		try{
+			$user = Sentry::findUserByCredentials(array(
+		        'email'      => $email,
+		        'password'   => $pass,
+		    ));
+			Sentry::login($user, false);
+			////return Redirect::to('/');
+			return "logeado";
+		}catch(Exception $e){
+			return "error";
+		}
+		
 	}
 
 	public function recuperacion()
