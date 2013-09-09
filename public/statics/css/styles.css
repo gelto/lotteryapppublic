@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+ * (es) Estilos principales
+ * (en) central stylesheet
+ * 
+ * @creator Susana Aguirre
+ * @file styles.css
+ * @ 19-08-2013
+ * 
+ */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body, html {
+	line-height: 1;
+	width: 100%;
+	height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************
+ * @general stuffs
+*************************************/
+.hidden { position:absolute; left: -999em; /*LTR*/ top: -999em; }
+.clear { clear: both; }
+.btn { display: block; }
+strong, b, em { font-weight:bold; }
+a, select, input, textarea, .btn { outline: none; }
+a { text-decoration: none; color: #d3d3d3; }
+sup { font-size: 8px; vertical-align: super; }
+.underlined { text-decoration: underline; }
+
+
+/*  ------------------  botones  ------------------- */
+.btn { display: block; padding: 9px 68px; }
+
+
+/*  ------------------  menus  ------------------- */
+.menuHorizontal { width: auto; }
+.menuHorizontal li, .menuHorizontal li a { display: block; }
+.menuHorizontal li { float: left; }
+
+.separator { display: block; float: left; width: 1px; height: 100%; }
+
+#header .menuHorizontal li a:hover, #header .menuLogin a:hover { color: #7bd24b; }
+
+/*  ------------------  listas  ------------------- */
+
+
+/*  ------------------  formularios  ------------------- */
+
+
+
+/*************************************
+ * @web style
+*************************************/
+body { color: #c9c9c9; font-family: Verdana, Geneva, sans-serif; font-size: 100%; font-style: normal; font-weight: normal; background:#000; }
+#wrapper { min-height: 1312px; margin: 0 auto; background:#000; }
+#wrapper, #footer { width: 1280px; }
+
+
+/*  ------------------  header  ------------------- */
+#header, #header .logoContainer { height: 150px; }
+#header { background: #181818 url(../img/bg_header1.jpg); overflow: hidden; }
+#header .container { float: left; }
+#header .logoContainer { width: 320px; }
+#header .topContainer, #header .bottomContainer { width: 790px; padding: 0 20px 0 150px; }
+#header .topContainer { height: 80px; }
+#header .bottomContainer { height: 70px; }
+
+#header .logoContainer a, #header .logoContainer a img { display: block; width: 230px; height: 90px; }
+#header .logoContainer a { margin: 28px 0 0 38px; }
+
+#header .topContainer div, #header .topContainer .menuLogin { float: left; margin-top: 27px; height: 35px; }
+	#header .menuSearch { width: 340px; }
+	#header .menuLogin { width: 180px; padding-left: 25px; }
+	#header .menuApps { width: 242px; }
+
+	#header .menuSearch label { width: 100px; font-family: 'YanoneBold'; line-height: 35px; }
+	#header .menuSearch input { float: right; margin-top: 5px; width: 220px; height: 25px; padding: 0 10px; background-color: #ffffff; border: 1px solid #919191; color: #747474; }
+	
+	#header .menuLogin li, #header .menuLogin li a { font-size: 14px; height: 35px; line-height: 35px; }
+	#header .menuLogin .separator { background-color: #a1c637; margin: 0 20px; }
+
+	/* para el efecto subrayado */
+	/*#header .menuLogin li { padding-top: 2px; }
+	#header .menuLogin li a { line-height: 31px; }*/
+
+	#header .menuApps { width: auto; float: right !important; }
+	#header .menuApps .logoStore { display: none; }
+	#header .menuApps.displayLogos { margin-top: 14px; }
+	#header .menuApps.displayLogos .logoStore { display: inline-block; width: 48px; height: 55px; margin-left: 10px; }
+	#header .menuApps.displayLogos .logoApp { display: none; }
+
+	#header .menuMain, #header .menuMain li, #header .menuMain li a { height: 22px; line-height: 22px; }
+	#header .menuMain { float: left; margin-top: 24px; }
+	#header .menuMain .separator { background-color: #555; margin: 0 40px; }
+	
+	#header .menuSocial, #header .menuSocial li, #header .menuSocial li a, #header .menuSocial li a img { height: 31px; }
+	#header .menuSocial { float: right; margin-top: 17px; }
+	#header .menuSocial li { margin-left: 5px; float: right; }
+
+/*  ------------------  contenido  ------------------- */
+#content .container {  }
+
+
+/*  ------------------  footer  ------------------- */
+#footer { position: fixed; bottom: 0; height: 46px; background: #1f1f1f url(../img/bg_footer.jpg) repeat top; }
+#footer a, #footer p { color: #626262; margin-top: 23px; font-size: 12px; font-weight: bold; }
+#footer p { width: auto; float: right; margin-right: 145px; }
+#footer a { display: block; width: auto; float: left; margin-left: 155px; }
+#footer a:hover { text-decoration: underline; }
+
+
+/*  ------------------  effects  ------------------- */
+
+/* Effect 5: same word slide in */
+.cl-effect-5 a {
+	overflow: hidden;
+	padding: 0 4px;
+	height: 1em;
+}
+
+.cl-effect-5 a:hover {
+	color: #dadada !important;
+}
+
+.cl-effect-5 a span {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-5 a span::after {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	content: attr(data-hover);
+	color: #7bd24b;
+	/*border-bottom: 2px solid #fff; */
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.cl-effect-5 a:hover span,
+.cl-effect-5 a:focus span {
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+/* Effect 17: move up fade out, push border */
+.cl-effect-17 a {
+	text-shadow: none;
+	position: relative;
+	padding-bottom: 5px;
+}
+
+.cl-effect-17 a::before {
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #d3d3d3;
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a:hover::before,
+.cl-effect-17 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.cl-effect-17 a:hover::after,
+.cl-effect-17 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
